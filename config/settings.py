@@ -100,7 +100,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Parse database configuration from $DATABASE_URL
 import dj_database_url
 #updated
-DATABASES = {'default': dj_database_url.config(default='postgresql://postgres:82ldtvgvhpoa8KBYuwOj@containers-us-west-160.railway.app:5521/railway')}
+DATABASES = {'default': dj_database_url.config(default='postgresql://postgres:TbsdxSmPoZpyX7TOf0zf@containers-us-west-79.railway.app:5842/railway')}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
