@@ -161,9 +161,14 @@ class ClientSubscriptionPOSTSerializer(ModelSerializer):
 
     def validate(self, attrs):
         user = self.context['request'].user
-        sub = ClientSubscription.objects.get(subscription__id=attrs['subscription'].id, client=user)
-        if sub:
-            raise serializers.ValidationError('You already have this subscription')
+        try:
+            sub = ClientSubscription.objects.get(subscription__id=attrs['subscription'].id, client=user)
+            if sub:
+                raise serializers.ValidationError('You already have this subscription')
+        except Exception:
+            pass
+
+
 
 
 class ClientSubscriptionGETSerializer(ModelSerializer):
