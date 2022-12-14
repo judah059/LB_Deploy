@@ -167,6 +167,7 @@ class ClientSubscriptionPOSTSerializer(ModelSerializer):
                 raise serializers.ValidationError('You already have this subscription')
         except Exception:
             pass
+        return attrs
 
 
 
